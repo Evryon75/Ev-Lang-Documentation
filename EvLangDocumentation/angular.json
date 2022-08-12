@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EvLangDoc": {
+    "EvLangDocumentation": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ev-lang-doc",
+            "outputPath": "dist/ev-lang-documentation",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "EvLangDoc:build:production"
+              "browserTarget": "EvLangDocumentation:build:production"
             },
             "development": {
-              "browserTarget": "EvLangDoc:build:development"
+              "browserTarget": "EvLangDocumentation:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "EvLangDoc:build"
+            "browserTarget": "EvLangDocumentation:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "EvLangDoc"
+  "defaultProject": "EvLangDocumentation"
 }
