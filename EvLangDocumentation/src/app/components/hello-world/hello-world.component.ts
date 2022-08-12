@@ -1,12 +1,16 @@
 import { Component } from "@angular/core";
-import { debug } from "console";
-
 @Component({
     selector: "hello",
     templateUrl: './hello-world.component.html',
     styleUrls: ['./hello-world.component.scss']
-})
 
+})
 export class HelloWorldComponent {
-    title = "Hello world!"
+    title = "Hello world!";
+    thing = 0;
+    constructor() {
+        
+        console.log("hi");
+        
+    }
 }
