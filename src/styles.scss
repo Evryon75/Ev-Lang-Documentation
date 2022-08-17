@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: rgba($color: #252525, $alpha: 1.0);
+    overflow: hidden;
+}
+pre {
+    background-color: rgb(66, 66, 66);
+    border-radius: 5px;
+    width: 70%;
+    color: rgb(230, 230, 230);
+    padding: 0.7%;
+}
+.whifle {
+    color: rgb(184, 73, 0)
+}
+.str {
+    color: lightgreen
+}
+.num {
+    color: rgb(255, 102, 0)
+}
+.fun {
+    color: rgb(0, 132, 255)
+}

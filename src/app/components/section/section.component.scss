@@ -1,0 +1,50 @@
+button {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    font: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    border-style: solid;
+    border-color: rgb(27, 27, 27);
+    border-left: 2px solid white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+button:hover {
+    animation-name: hover;
+    animation-duration: 0.5s;
+    background-color: rgb(49, 49, 49);
+    color: red;
+    border-left: 2px solid red;
+}
+button:not(hover) {
+    animation-name: not-hover;
+    animation-duration: 0.5s;
+}
+button:active {
+    background-color: rgb(63, 63, 63);
+    color: rgba($color: #ff7676, $alpha: 1.0);
+    border-left-color: #ff7676;
+}
+@keyframes hover {
+    from {
+        border-left: 2px solid red;
+        color: white;
+        background-color: rgb(27, 27, 27);
+    } to {
+        background-color: rgb(49, 49, 49);
+        color: red;
+    }
+}
+@keyframes not-hover {
+    from {
+        background-color: rgb(49, 49, 49);
+        color: red;
+    } to {
+        background-color: rgb(27, 27, 27);
+        color: white;
+    }
+}
