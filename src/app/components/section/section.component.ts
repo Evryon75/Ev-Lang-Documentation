@@ -8,10 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SectionComponent implements OnInit {
 
   @Input() sectionName: string = "UNINITIALIZED";
-
-  constructor() { }
-
+  constructor() {
+  }
   ngOnInit(): void {
+    
   }
 
 }

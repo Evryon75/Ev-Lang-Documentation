@@ -1,6 +1,6 @@
 body {
     background-color: rgba($color: #252525, $alpha: 1.0);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 pre {
     background-color: rgb(66, 66, 66);
@@ -20,4 +20,13 @@ pre {
 }
 .fun {
     color: rgb(0, 132, 255)
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(155, 155, 155, 0.63);
 }
