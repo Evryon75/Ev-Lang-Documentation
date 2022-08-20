@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="iframes.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="fade-top"></div>
+    <h1>Scopes in Ev</h1>
+    <h4>When entering a new block, a new scope layer is added. <br>
+        Declaring a function or a variable will save it in the current top scope.
+        When exiting a block the top scope is removed.
+    </h4>
+    <h4>There is a built in function [scopes()] that outputs the scope from where it is used, here is an example</h4>
+    <h3>Source code:</h3>
+    <pre>
+    <span class="whifle">let</span> x = 1;
+    <span class="whifle">fun</span> s = () {
+        <span class="whifle">let</span> y = 2;
+        <span class="fun">scopes</span>();
+    };
+    <span class="fun">s</span>();
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+    <span style="color: lightgreen;">[SYS] Lexing finished successfully
+    [SYS] Parsing finished successfully</span>
+    <span style="color: cyan;">[Variables]
+    Depth: 0, {
+        "x": Expression {
+            value: NumExpr {
+                value: 1.0,
+            },
+        },
+    }
+    Depth: 1, {
+        "y": Expression {
+            value: NumExpr {
+                value: 2.0,
+            },
+        },
+    }
+    [Functions]
+    Depth: 0, {
+        "s": Function {
+            params: [],
+            block: [
+                VariableDeclaration {
+                    value: LiteralE {
+                        value: NumberL {
+                            value: 2.0,
+                        },
+                    },
+                    identifier: "y",
+                },
+                ProcedureCall {
+                    identifier: "scopes",
+                    params: [],
+                },
+            ],
+        },
+    }
+    Depth: 1, {}
+    <span style="color: lightgreen;">[SYS] Process finished successfully</span>
+    <span style="color: white;">Press [ENTER] to close, or input "DEBUG" to access debug information</span>
+    <span style="color: gray;">Both "DEBUG" and "debug" will work</span>     
+    </pre>
+    <h4>It simply prints the abstract syntax tree of the variables or functions</h4>
+    <div class="fade-bottom"></div>
+    </body>
+</html>

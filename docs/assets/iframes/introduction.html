@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="iframes.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="fade-top"></div>
+    <h1>Introduction to the Ev Programming Language</h1>
+    <h4>
+        The Ev Programming Language is a general purpose language.<br>
+        It is dynamically typed and relatively high level.<br>
+        The interpreter is made in <span style="color: orange;">rust</span> 🦀, it goes through tokenizing, parsing, and walking the abstract syntax tree.<br>
+        <br>Here is an example program:
+    </h4>
+    <h3>Source code:</h3>
+    <pre>
+    <span class="whifle">let</span> x = <span class="str">"Hello,"</span>;
+    <span class="fun">output</span>(x, <span class="str">"world!"</span>);
+    </pre>
+    <h3>Output:</h3>
+    <pre><span style="color: lightgreen;">    [SYS] Lexing finished successfully
+    [SYS] Parsing finished successfully</span>
+    [OUT] Hello, world!
+    <span style="color: lightgreen;">[SYS] Process finished successfully</span>
+    <span style="color: gray;">Press [ENTER] to close, or input "DEBUG" to access debug information
+    Both "DEBUG" and "debug" will work</span>
+    </pre>
+    <p><span style="color: gray;">[SYS] and [OUT] are aligned in the program, this is just a font related error</span></p>
+    <h4>To execute your source code simply put the interpreter in a folder together with a file named "main.ev",<br>
+        if no such file is found the interpreter will run into an error and immediately close.<br>
+        <br><a href="https://code.visualstudio.com"><span style="color: red;">Visual Studio Code</span></a> is a great IDE to work in Ev, you can edit main.ev and simply run this command <pre>
+    start ev_interpreter.exe
+        </pre>
+        (or whatever the interpreter's name is if you choose to rename it) in your terminal.<br>
+        Alternatively you can also just double click the interpreter from your file explorer.<br>
+        Dont forget you can press the up arrow key to cycle through your previous terminal commands!
+    </h4>
+    <div class="fade-bottom"></div>
+    </body>
+</html>

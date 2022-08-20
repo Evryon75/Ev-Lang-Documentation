@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="iframes.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="fade-top"></div>
+    <h1>Variables</h1>
+    <h4>
+        Variables in Ev are declared on top scope, and must be initialized<br>
+    </h4>
+    <h3>Example:</h3>
+    <pre>
+    <span class="whifle">let</span> x = <span class="num">1</span>;
+    </pre>
+    <h4>
+        This is the part of the <span style="color: orange;">rust</span> 🦀 code that saves variables
+    </h4>
+    <pre class="rust">
+    Node::<span class="whifle">VariableDeclaration</span> { value, identifier } => {
+        <span class="whifle">let mut</span> duplicate = <span class="fun">false</span>;
+        <span class="whifle">for</span> i <span class="whifle">in</span> variables.<span class="fun">clone</span>() {
+            <span class="whifle">if</span> i.<span class="fun">contains_key</span>(identifier) {
+                duplicate = <span class="num">true</span>;
+            }
+        }
+        <span class="whifle">if</span> !duplicate {
+            <span class="whifle">let</span> val = Expression {
+                value: <span class="fun">walk_expression</span>(&value.<span class="fun">to_owned</span>(), variables, functions),
+            };
+            (*variables)[last].<span class="fun">insert</span>(identifier.<span class="fun">to_string</span>(), val);
+        } <span class="whifle">else</span> {
+            <span class="fun">red_ln!</span>(
+                <span class="str">"Walking error: duplicate variable identifier [{}]"</span>,
+                identifier
+            );
+            <span class="fun">gray_ln!</span>(<span class="str">"Press [ENTER] to close"</span>);
+            <span class="fun">stdin</span>().<span class="fun">read_line</span>(&mut String::<span class="fun">from</span>(<span class="str">""</span>)).<span class="fun">expect</span>(<span class="str">""</span>);
+            <span class="fun">panic!</span>()
+        }
+    }
+    </pre>
+    <h4>Ev does not support pointers as of now</h4>
+    <div class="fade-bottom"></div>
+    </body>
+</html>
