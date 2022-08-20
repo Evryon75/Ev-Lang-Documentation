@@ -17,34 +17,35 @@
     </h4>
     <h3>Example:</h3>
     <pre>
-        <span class="whifle">if</span> <span class="num">1</span> == <span class="num">1</span> {
+    <span class="whifle">if</span> <span class="num">1</span> == <span class="num">1</span> {
+        <span style="color: gray">// Block</span>
+    } <span class="whifle">else</span> {
+        <span style="color: gray">// Else block</span>
+        <span class="whifle">if</span> <span class="num">2</span> == <span class="num">2</span> {
             <span style="color: gray">// Block</span>
-        } <span class="whifle">else</span> {
-            <span style="color: gray">// Else block</span>
-            <span class="whifle">if</span> <span class="num">2</span> == <span class="num">2</span> {
-                <span style="color: gray">// Block</span>
-            };
         };
+    };
     </pre>
     <h4>
         This is the part of the <span style="color: orange;">rust</span> 🦀 code that walks if statements
     </h4>
     <pre class="rust">
-        Node::<span class="whifle">if</span> {
-            condition,
-            block,
-            else_block,
-        } => {
-            <span class="whifle">let</span> cond: <span class="num">bool</span> = <span class="whifle">match</span> <span class="fun">walk_expression</span>(
-                &condition.<span class="fun">to_owned</span>(),
-                variables,
-                functions,
-            ) {...error handling};
-            <span class="whifle">if</span> cond {
-                <span class="fun">walk_block</span>(block, variables, functions, &vec![], &vec![]);
-            } <span class="whifle">else</span> {
-                <span class="fun">walk_block</span>(else_block, variables, functions, &vec![], &vec![]);
-            }
+    Node::<span class="whifle">if</span> {
+        condition,
+        block,
+        else_block,
+    } => {
+        <span class="whifle">let</span> cond: <span class="num">bool</span> = <span class="whifle">match</span> <span class="fun">walk_expression</span>(
+            &condition.<span class="fun">to_owned</span>(),
+            variables,
+            functions,
+        ) {...error handling};
+        <span class="whifle">if</span> cond {
+            <span class="fun">walk_block</span>(block, variables, functions, &vec![], &vec![]);
+        } <span class="whifle">else</span> {
+            <span class="fun">walk_block</span>(else_block, variables, functions, &vec![], &vec![]);
+        }
+    }
     </pre>
     <h4><span style="color: gray;">Note: 1 and "1" are equal in Ev, this is similar to javascript</span></h4>
     <div class="fade-bottom"></div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="iframes.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="fade-top"></div>
+    <h1>Aborting a process</h1>
+    <h4>
+        You may need to stop the process from running at any point, and display an error message.<br>
+        There is a built in function just for that.
+    </h4>
+    <h3>Example:</h3>
+    <pre>
+    <span class="whifle">if</span> <span class="num">1</span> == <span class="fun">input</span>(<span class="str">"num"</span>) {
+        <span class="fun">abort</span>(<span class="str">"You cannot input 1"</span>);
+    };
+    </pre>
+    <h3>Output:</h3>
+    <pre><span style="color: lightgreen;">    [SYS] Lexing finished successfully
+    [SYS] Parsing finished successfully</span>
+    > 1
+    <span style="color: red;">Process stopped: "You cannot input 1"</span> 
+    Press [ENTER] to close
+    </pre>
+    <h4>It can work without any parameters too.</h4>
+    <div class="fade-bottom"></div>
+    </body>
+</html>

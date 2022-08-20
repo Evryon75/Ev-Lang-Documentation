@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="iframes.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>omg hi</h1>
-</body>
+    <div class="fade-top"></div>
+    <h1>Input and Output</h1>
+    <h4>We can take input with the built in function,<br>
+    we need to pass a string parameter that specifies the type of input we are trying to get,<br>
+    "str" for strings and "num" for numbers</h4>
+    <h3>Example for strings:</h3>
+    <pre>
+    <span class="whifle">let</span> string_var = <span class="fun">input</span>(<span class="str">"str"</span>);
+    </pre>
+    <h3>Example for numbers:</h3>
+    <pre>
+    <span class="whifle">let</span> number_var = <span class="fun">input</span>(<span class="str">"num"</span>);
+    </pre>
+    <h4>
+        If we try to input a string for a number input an error will occur
+    </h4>
+    <h3>Example:</h3>
+    <pre><span style="color: lightgreen;">    [SYS] Lexing finished successfully
+    [SYS] Parsing finished successfully</span>
+    > not a number
+    <span style="color: red;">[ERR] Walking error: you cannot convert letters to a number</span> 
+    <span style="color: gray;">This includes empty spaces</span>
+    Press [ENTER] to close
+    </pre>
+    <h4>To output something, simply use the built in function and pass as many parameters are you want. <br>
+    They will be printed with a space in between them</h4>
+    <h3>Example:</h3>
+    <pre>
+    <span class="fun">output</span>(<span class="str">"Hello"</span>, <span class="str">"world!</span>);
+    </pre>
+    <h3>Output:</h3>
+    <pre><span style="color: lightgreen;">    [SYS] Lexing finished successfully
+    [SYS] Parsing finished successfully</span>
+    [OUT] Hello world!
+    <span style="color: lightgreen;">[SYS] Process finished successfully</span>
+    <span style="color: gray;">Press [ENTER] to close, or input "DEBUG" to access debug information
+    Both "DEBUG" and "debug" will work</span>
+    </pre>
+    <h4 style="color: gray;">Note: "output" makes more sense than "print" to me</h4>
+    <div class="fade-bottom"></div>
+    </body>
 </html>

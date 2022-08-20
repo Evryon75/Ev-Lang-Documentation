@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="fade-top"></div>
-    <h1>Variables</h1>
+    <h1>Functions</h1>
     <h4>
         Functions in Ev are declared on top scope, the syntax does not mean much under the hood.<br>
         It could be said that the lowest scope is some sort of main function, as it is still a block.<br>
@@ -17,9 +17,9 @@
     </h4>
     <h3>Example:</h3>
     <pre>
-        <span class="whifle">fun</span> add = (x, y) {
-            <span class="whifle">return</span> x + y;
-        };
+    <span class="whifle">fun</span> add = (x, y) {
+        <span class="whifle">return</span> x + y;
+    };
     </pre>
     <h4>
         If no return statement is provided it will return a null value, returned values can be ignored and that is the purpose of <br>
@@ -27,48 +27,48 @@
     </h4>
     <h3>Example:</h3>
     <pre>
-        <span class="whifle">fun</span> output_add = (x, y) {
-            <span class="fun">output</span>(x + y);
-        };
+    <span class="whifle">fun</span> output_add = (x, y) {
+        <span class="fun">output</span>(x + y);
+    };
     </pre>
     <h4>Functions can be declared inside other functions in Ev</h4>
     <h3>Example:</h3>
     <pre>
-        <span class="whifle">fun</span> one = (x) {
-            <span class="whifle">fun</span> two = (y) {
-                
-            };
+    <span class="whifle">fun</span> one = (x) {
+        <span class="whifle">fun</span> two = (y) {
+            
         };
+    };
     </pre>
     <h4>
         This is the part of the <span style="color: orange;">rust</span> 🦀 code that saves variables
     </h4>
     <pre class="rust">
-        Node::<span class="whifle">VariableDeclaration</span> { value, identifier } => {
-            <span class="whifle">let mut</span> duplicate = <span class="fun">false</span>;
-            <span class="whifle">for</span> i <span class="whifle">in</span> functions.<span class="fun">clone</span>() {
-                <span class="whifle">if</span> i.<span class="fun">contains_key</span>(identifier) {
-                    duplicate = <span class="num">true</span>;
-                }
-            }
-            <span class="whifle">if</span> !duplicate {
-                (*functions)[last].<span class="fun">insert</span>(
-                    identifier.<span class="fun">to_string</span>(),
-                    Function {
-                        params: parameters.<span class="fun">to_owned</span>(),
-                        block: block.<span class="fun">to_owned</span>(),
-                    },
-                );
-            } <span class="whifle">else</span> {
-                <span class="fun">red_ln!</span>(
-                    <span class="str">"Walking error: duplicate function identifier [{}]"</span>,
-                    identifier
-                );
-                <span class="fun">gray_ln!</span>(<span class="str">"Press [ENTER] to close"</span>);
-                <span class="fun">stdin</span>().<span class="fun">read_line</span>(&mut String::<span class="fun">from</span>(<span class="str">""</span>)).<span class="fun">expect</span>(<span class="str">""</span>);
-                <span class="fun">panic!</span>()
+    Node::<span class="whifle">VariableDeclaration</span> { value, identifier } => {
+        <span class="whifle">let mut</span> duplicate = <span class="fun">false</span>;
+        <span class="whifle">for</span> i <span class="whifle">in</span> functions.<span class="fun">clone</span>() {
+            <span class="whifle">if</span> i.<span class="fun">contains_key</span>(identifier) {
+                duplicate = <span class="num">true</span>;
             }
         }
+        <span class="whifle">if</span> !duplicate {
+            (*functions)[last].<span class="fun">insert</span>(
+                identifier.<span class="fun">to_string</span>(),
+                Function {
+                    params: parameters.<span class="fun">to_owned</span>(),
+                    block: block.<span class="fun">to_owned</span>(),
+                },
+            );
+        } <span class="whifle">else</span> {
+            <span class="fun">red_ln!</span>(
+                <span class="str">"Walking error: duplicate function identifier [{}]"</span>,
+                identifier
+            );
+            <span class="fun">gray_ln!</span>(<span class="str">"Press [ENTER] to close"</span>);
+            <span class="fun">stdin</span>().<span class="fun">read_line</span>(&mut String::<span class="fun">from</span>(<span class="str">""</span>)).<span class="fun">expect</span>(<span class="str">""</span>);
+            <span class="fun">panic!</span>()
+        }
+    }
     </pre>
     <div class="fade-bottom"></div>
     </body>

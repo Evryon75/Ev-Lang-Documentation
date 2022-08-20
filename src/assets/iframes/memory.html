@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="iframes.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="fade-top"></div>
+    <h1>Memory</h1>
+    <h4>Memory in Ev is represented by rust vectors, there are 2: one for variables and one for functions. <br>
+    The vectors hold hashmaps, with the identifier name as the key and the expression or function type, containing the parameters and the block <br>
+    as the key.
+    </h4>
+    <pre class="rust">
+    <span class="whifle">let mut</span> variables: Vec&lt;HashMap&lt;String, Expression&gt;&gt; = <span class="fun">vec!</span>[];
+    <span class="whifle">let mut</span> functions: Vec&lt;HashMap&lt;String, Function&gt;&gt; = <span class="fun">vec!</span>[];
+    </pre>
+    <h4>You can free a variable or function before its scope ends with a built in function. <br>
+    This is useful to recursion
+    </h4>
+    <h3>Example:</h3>
+    <pre>
+    <span class="whifle">fun</span> rec = () {
+        <span class="whifle">let</span> temp = <span class="str">"a"</span>;
+        <span class="fun">free</span>(temp);
+        <span class="fun">rec</span>();
+    };
+    </pre>
+    <h4>
+        If we didn't do this we would run into an error stating that the variable "temp" already exists in this scope, since we never exit it in this case.
+    </h4>
+    <div class="fade-bottom"></div>
+    </body>
+</html>
