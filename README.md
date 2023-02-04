@@ -1,2 +1,2 @@
 # Documentation for the Ev programming language
-> link: wip
+> link: https://evryon75.github.io/Ev-Lang-Documentation/
